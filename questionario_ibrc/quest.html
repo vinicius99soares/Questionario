@@ -1,0 +1,424 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>IBRC Teste</title>
+  </head>
+  <body>
+    <div>
+      sua idade
+      <input
+        type="button onclick="
+        window.location.href="finalizacao.html"
+        id="btnQuestaoIdade"
+      />
+    </div>
+    <br />
+    <div id="divOperadoras">
+      1 - Quando pensa em plano de saúde, qual é o nome da operadora que
+      primeiro lhe vem à cabeça?
+      <div id="selectOperadora"></div>
+      <input type="button" id="btnQuestao2" value="Confirmar escolha" />
+    </div>
+    <br />
+    <div>
+      2 - Por ordem de prioridade, peço que diga o que considera mais importante
+      na gestão do seu plano de previdência, onde 1 é o mais importante e 5 é o
+      menos importante?
+      <select name="opiniao" id="opiniao">
+        <option value="resu">1 - Resultado dos investimentos do plano</option>
+        <option value="atedins">
+          1 - Atendimento da área de relacionamento institucional
+        </option>
+        <option value="atedon" selected>
+          1 - Atendimento (e-mail, site, telefone )
+        </option>
+        <option value="comp">1 - Compromisso com a Integridade</option>
+        <option value="consu">1 - Consultoria Previdenciária</option>
+      </select>
+      <br />
+      <br />
+      <select name="opiniao" id="opiniao">
+        <option value="resu">2 - Resultado dos investimentos do plano</option>
+        <option value="atedins" selected>
+          2 - Atendimento da área de relacionamento institucional
+        </option>
+        <option value="atedon">
+          2 - Atendimento (e-mail, site, telefone )
+        </option>
+        <option value="comp">2 - Compromisso com a Integridade</option>
+        <option value="consu">2 - Consultoria Previdenciária</option>
+      </select>
+      <br />
+      <br />
+      <select name="opiniao" id="opiniao">
+        <option value="resu" selected>
+          3 - Resultado dos investimentos do plano
+        </option>
+        <option value="atedins">
+          3 - Atendimento da área de relacionamento institucional
+        </option>
+        <option value="atedon">
+          3 - Atendimento (e-mail, site, telefone )
+        </option>
+        <option value="comp">3 - Compromisso com a Integridade</option>
+        <option value="consu">3 - Consultoria Previdenciária</option>
+      </select>
+      <br />
+      <br />
+      <select name="opiniao" id="opiniao">
+        <option value="resu">4 - Resultado dos investimentos do plano</option>
+        <option value="atedins">
+          4 - Atendimento da área de relacionamento institucional
+        </option>
+        <option value="atedon">
+          4 - Atendimento (e-mail, site, telefone )
+        </option>
+        <option value="comp" selected>4 - Compromisso com a Integridade</option>
+        <option value="consu">4 - Consultoria Previdenciária</option>
+      </select>
+      <br />
+      <br />
+      <select name="opiniao" id="opiniao">
+        <option value="resu">5 - Resultado dos investimentos do plano</option>
+        <option value="atedins">
+          5 - Atendimento da área de relacionamento institucional
+        </option>
+        <option value="atedon">
+          5 - Atendimento (e-mail, site, telefone )
+        </option>
+        <option value="comp">5 - Compromisso com a Integridade</option>
+        <option value="consu" selected>5 - Consultoria Previdenciária</option>
+      </select>
+      <br />
+    </div>
+    <br />
+    <div>
+      3 - O quanto você se considera informado sobre as condições, regras e
+      informações do seu plano de previdência do IBRC?
+      <br />
+
+      <input type="radio" name="questao3" value="0" />
+      <label>NA (Não Aplicável)</label><br />
+
+      <input type="radio" name="questao3" value="1" />
+      <label>Muito bem informado</label><br />
+
+      <input type="radio" name="questao3" value="2" />
+      <label>Bem informado</label><br />
+
+      <input type="radio" name="questao3" value="3" />
+      <label>Mais ou menos informado</label><br />
+
+      <input type="radio" name="questao3" value="4" />
+      <label>Mal informado</label><br />
+
+      <input type="radio" name="questao3" value="5" />
+      <label>Muito mal informado</label><br />
+
+      <input type="button" id="btnQuestao3" value="Confirmar escolha" />
+    </div>
+    <br />
+    <div id="questao4" style="display: none">
+      4 - por qual razão se sente mal informado em relação ao seu plano de
+      previdência do IBRC?
+
+      <input
+        type="checkbox"
+        name="questao4checkbox"
+        class="checkboxQuestao4"
+        onclick="limitarCheckbox()"
+        value="0"
+      />Não sabe onde pode encontrar essas informações
+      <br />
+
+      <input
+        type="checkbox"
+        name="questao4checkbox"
+        class="checkboxQuestao4"
+        onclick="limitarCheckbox()"
+        value="1"
+      />Não tem interesse / Não quer saber
+      <br />
+
+      <input
+        type="checkbox"
+        name="questao4checkbox"
+        class="checkboxQuestao4"
+        onclick="limitarCheckbox()"
+        value="2"
+      />Acha muito confuso, os termos são muito técnicos
+      <br />
+
+      <input
+        type="checkbox"
+        name="questao4checkbox"
+        class="checkboxQuestao4"
+        onclick="limitarCheckbox()"
+        value="3"
+      />É muito extenso, longo demais. Poderia ser menor
+      <br />
+
+      <input
+        type="checkbox"
+        name="questao4checkbox"
+        class="checkboxQuestao4"
+        onclick="limitarCheckbox()"
+        value="4"
+      />Está sempre mudando
+      <br />
+
+      <input
+        type="checkbox"
+        name="questao4checkbox"
+        class="checkboxQuestao4"
+        onclick="limitarCheckbox()"
+        value="5"
+      />Outro motivo
+      <br />
+
+      <input
+        type="checkbox"
+        name="questao4checkbox"
+        class="checkboxQuestao4"
+        onclick="limitarCheckbox()"
+        value="6"
+      />NA (Não Aplicável)
+      <br />
+    </div>
+    <br />
+    <div id="questao5">
+      5 - Você é correntista do IBRC?
+      <br />
+
+      <input type="radio" name="questao5radio" value="sim" />
+      <label>Sim</label><br />
+
+      <input type="radio" name="questao5radio" value="nao" />
+      <label>Não</label><br />
+
+      <input type="button" id="btnQuestao5" value="Confirmar escolha" />
+    </div>
+
+    <div id="questao6" style="display: none">
+      6 - Quais produtos você gostaria de ter uma oferta especial como
+      correntista do IBRC?
+      <br />
+
+      <input type="checkbox" name="questao6checkbox" value="0" />Capitalização
+      <br />
+      <input type="checkbox" name="questao6checkbox" value="1" />Cartão de
+      crédito
+      <br />
+      <input type="checkbox" name="questao6checkbox" value="2" />Consórcios
+      <br />
+      <input type="checkbox" name="questao6checkbox" value="3" />Conta Corrente
+      <br />
+      <input type="checkbox" name="questao6checkbox" value="4" />Empréstimo
+      <br />
+      <input type="checkbox" name="questao6checkbox" value="5" />Financiamento
+      imobiliário
+      <br />
+      <input type="checkbox" name="questao6checkbox" value="6" />Plano
+      odontológico
+      <br />
+      <input type="checkbox" name="questao6checkbox" value="7" />Seguro
+      automóvel
+      <br />
+      <input type="checkbox" name="questao6checkbox" value="8" />Seguro
+      residencial
+      <br />
+      <input
+        type="checkbox"
+        name="questao6checkbox"
+        id="questao6outros"
+        onclick="mostrarOutros()"
+        value="9"
+      />Outros
+      <br />
+
+      <input
+        type="text"
+        name="questao6outrosText"
+        id="questao6outrosText"
+        placeholder="Qual?"
+        style="display: none"
+      />
+
+      <input type="button" id="btnQuestao6" value="Confirmar escolha" />
+    </div>
+    <br />
+    <div id="questao7" style="display: none">
+      7 - Mesmo não sendo correntista do IBRC, para quais produtos você gostaria
+      de ter uma oferta especial como cliente do IBRC?
+      <br />
+      <input type="checkbox" name="questao7checkbox" value="0" />Capitalização
+      <br />
+      <input type="checkbox" name="questao7checkbox" value="1" />Cartão de
+      crédito
+      <br />
+      <input type="checkbox" name="questao7checkbox" value="2" />Consórcios
+      <br />
+      <input type="checkbox" name="questao7checkbox" value="3" />Conta Corrente
+      <br />
+      <input type="checkbox" name="questao7checkbox" value="4" />Empréstimo
+      <br />
+      <input type="checkbox" name="questao7checkbox" value="5" />Financiamento
+      imobiliário
+      <br />
+      <input type="checkbox" name="questao7checkbox" value="6" />Plano
+      odontológico
+      <br />
+      <input type="checkbox" name="questao7checkbox" value="7" />Seguro
+      automóvel
+      <br />
+      <input type="checkbox" name="questao7checkbox" value="8" />Seguro
+      residencial
+      <br />
+      <input
+        type="checkbox"
+        name="questao7checkbox"
+        id="questao7outros"
+        onclick="mostrarOutros7()"
+        value="9"
+      />Outros
+      <br />
+
+      <input
+        type="text"
+        name="questao7outrosText"
+        id="questao7outrosText"
+        placeholder="Qual?"
+        style="display: none"
+      />
+
+      <br />
+    </div>
+    <div id="questao8" style="display: none">
+      8 - Você tem interesse em ter uma conta no IBRC?
+      <br />
+
+      <input type="radio" name="questao8radio" value="sim" />
+      <label>Sim</label><br />
+
+      <input type="radio" name="questao8radio" value="nao" />
+      <label>Não</label><br />
+
+      <input type="button" id="btnQuestao8" value="Confirmar escolha" />
+    </div>
+
+    <div id="questao9" style="display: none">
+      9 - Por último, qual a probabilidade de você indicar a
+      <span id="nomeDaOperadoraSpan"></span> para um amigo ou parente? Dê uma
+      nota de 10 a 0, onde 10 é altamente provável e 0 é nem um pouco provável.
+      <br />
+
+      <input
+        type="radio"
+        name="questao9radio"
+        onclick="verificarProbabilidade()"
+        value="0"
+      />
+      <label>0</label><br />
+
+      <input
+        type="radio"
+        name="questao9radio"
+        onclick="verificarProbabilidade()"
+        value="1"
+      />
+      <label>1</label><br />
+
+      <input
+        type="radio"
+        name="questao9radio"
+        onclick="verificarProbabilidade()"
+        value="2"
+      />
+      <label>2</label><br />
+
+      <input
+        type="radio"
+        name="questao9radio"
+        onclick="verificarProbabilidade()"
+        value="3"
+      />
+      <label>3</label><br />
+
+      <input
+        type="radio"
+        name="questao9radio"
+        onclick="verificarProbabilidade()"
+        value="4"
+      />
+      <label>4</label><br />
+
+      <input
+        type="radio"
+        name="questao9radio"
+        onclick="verificarProbabilidade()"
+        value="5"
+      />
+      <label>5</label><br />
+
+      <input
+        type="radio"
+        name="questao9radio"
+        onclick="verificarProbabilidade()"
+        value="6"
+      />
+      <label>6</label><br />
+
+      <input
+        type="radio"
+        name="questao9radio"
+        onclick="verificarProbabilidade()"
+        value="7"
+      />
+      <label>7</label><br />
+
+      <input
+        type="radio"
+        name="questao9radio"
+        onclick="verificarProbabilidade()"
+        value="8"
+      />
+      <label>8</label><br />
+
+      <input
+        type="radio"
+        name="questao9radio"
+        onclick="verificarProbabilidade()"
+        value="9"
+      />
+      <label>9</label><br />
+
+      <input
+        type="radio"
+        name="questao9radio"
+        onclick="verificarProbabilidade()"
+        value="10"
+      />
+      <label>10</label><br />
+
+      <input
+        type="text"
+        name="questao9motivoText"
+        id="questao9motivoText"
+        placeholder="Digite o motivo"
+        style="display: none"
+      />
+    </div>
+    <br />
+    <div id="questao10" style="display: none">
+      10 - A quanto tempo trabalha no IBRC?
+      <br />
+      <input type="number" placeholder="Anos" />
+      <input type="number" placeholder="Meses" />
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
